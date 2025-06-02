@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kareem | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header><nav>
+  <a href="index.html">Home</a> |
+  <a href="projects.html">Projects</a> |
+  <a href="contact.html">Contact</a>
+</nav>
+  </header>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Project 1:</strong> Development of Hybrid Hemp Natural Fiber Composite Material for Aerospace Applications. – Manufactured and Analysed the physical properties of a composite material using natural fibers(Hemp, lenin, flax etc) for aerospace and defence applications.</li>
+    </ul>
+  </section>
+  
+
+ 
+
+<footer>
+    <p>© 2025 Kareem. Crafted with clarity, powered by passion.</p>
+  </footer>
+<script>
+  document.querySelectorAll('nav a[href^="#"], nav a[href$=".html"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = this.getAttribute('href');
+
+      if(target.startsWith('#')) {
+        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = target;
+      }
+    });
+  });
+</script>
+</body>
+</html>
