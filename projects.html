@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header><nav>
+  <header><nav><!-- Theme Toggle Switch -->
+<button id="themeToggle" title="Toggle Dark Mode">🌙</button>
   <a href="index.html">Home</a> |
   <a href="projects.html">Projects</a> |
   <a href="contact.html">Contact</a>
@@ -49,5 +50,46 @@
 <script>
   AOS.init();
 </script>
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+<script>
+  // Show button when user scrolls down
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll back to top when clicked
+  document.getElementById("backToTop").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+
+  // 1. Load theme from localStorage (if set)
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  // 2. Toggle theme + save preference
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-mode');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+
+    // Save to localStorage
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
 </body>
 </html>
