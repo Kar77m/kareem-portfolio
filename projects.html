@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +17,7 @@
 </nav>
   </header>
 
-  <section id="projects" class="fade-in">
+  <section id="projects" data-aos="zoom-in" data-aos-delay="200">
     <h2>Projects</h2>
     <ul>
       <li><strong>Academic Project - </strong> Development of Hybrid Hemp Natural Fiber Composite Material for Aerospace Applications. Manufactured and Analysed the physical properties of a composite material using natural fibers(Hemp, lenin, flax etc) for aerospace and defence applications.</li>
@@ -41,6 +43,11 @@
       }
     });
   });
+</script>
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
 </body>
 </html>
