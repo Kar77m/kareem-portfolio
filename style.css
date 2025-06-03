@@ -150,3 +150,16 @@ footer {
     opacity: 1;
   }
 }
+button, .btn {
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #ff5e57;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
