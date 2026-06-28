@@ -1,0 +1,2 @@
+bus_seats=["Ravi","Priya","simran"]
+print(bus_seats[0])
